@@ -1,11 +1,11 @@
-type Props = {
+type childrenProps = {
   children: string
 }
 
-const Heading = (props: Props) => {
+const Heading = ({ children }: childrenProps) => {
   return (
     <div>
-      <h2>{props.children} </h2>
+      <h2>{children} </h2>
     </div>
   )
 }

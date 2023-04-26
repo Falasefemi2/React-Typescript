@@ -1,10 +1,10 @@
+type OscarProp ={
+  children: React.ReactNode
+}
 
-
-type Props = {}
-
-const Oscar = (props: Props) => {
+const Oscar = ({children}: OscarProp) => {
   return (
-    <div>Oscar</div>
+    <div>{children}</div>
   )
 }
 
