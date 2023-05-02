@@ -13,6 +13,9 @@
 // import { ThemeContextProvider } from "./components/context/ThemeContext"
 // import Box from "./components/context/Box"
 
+import Private from "./auth/Private"
+import Profile from "./auth/Profile"
+import List from "./generics/List"
 import DomRef from "./ref/DomRef"
 import MutableRef from "./ref/MutableRef"
 
@@ -87,6 +90,26 @@ const App = () => {
     <div>
       <DomRef />
       <MutableRef />
+      <Private isLoggedIn={true} Component={Profile} />
+      <List items={['batman', 'superman', 'flash']} onClick={(item) => console.log(item)
+      } />
+      <List items={[1,2,3]} onClick={(item) => console.log(item)
+      } />
+      <List items={[
+        {
+          first: 'femi',
+          last: 'falase',
+        },
+        {
+          first: 'clark',
+          last: 'tayo'
+        },
+        {
+          first: 'yusuf',
+          last: 'az',
+        },
+      ]} onClick={(item) => console.log(item)
+      } />
     </div>
   )
 }
